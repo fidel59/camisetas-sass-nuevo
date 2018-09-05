@@ -1,0 +1,71 @@
+@import "reboot";
+@import "font";
+@import "variables";
+@import "mixins";
+ 
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+.camisetas {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 35%;
+    background-position: 10% 200px;
+    
+    img {
+        float: right;
+        width: 450px;
+        margin-right: 10%;
+        margin-top: 15%;
+    }
+}
+.escudo {
+    display: flex;
+    align-items: center;
+    img {
+        height: 70%;
+        margin: 10px 20px 10px 50px;
+    }
+    h2 {
+        font-family: suecaslabmedium, Georgia;
+        font-size: 30px;
+    }
+}
+
+h2#arsenal {
+    color: lighten($arsenal-equipo, 50%);
+}
+#arsenal-local {
+    @include camisetas-back("../img/Arsenal_Home_1000x1000.png", $arsenal-color )
+   
+}
+#arsenal-visit {
+    background-image: url("../img/Arsenal_Away_1000x1000.png");
+    background-color:$arsenal-color;
+}
+h2#aston {
+    color: $aston-color;
+}
+#aston-local {
+    background-image: url("../img/Aston_Villa_Home_1000x1000.png");
+    background-color: $aston-color;
+}
+#aston-visit {
+    background-image: url("../img/Aston_Villa_Away_1000x1000.png");
+    background-color: $aston-color;
+}
+h2#burnley {
+    color: #789ab2;
+}
+#burnley-local {
+    background-image: url("../img/Aston_Villa_Home_1000x1000.png");
+    background-color: #789ab2;
+}
+#burnley-visit {
+    background-image: url("../img/Aston_Villa_Away_1000x1000.png");
+    background-color: #789ab2;
+}
